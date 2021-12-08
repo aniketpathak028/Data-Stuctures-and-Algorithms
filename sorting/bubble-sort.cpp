@@ -34,3 +34,7 @@ int main()
     for (auto i : a)
         cout << i << " ";
 }
+
+// 4 2 3 1 5
+// Step-1
+// 2 4 3 1 5
