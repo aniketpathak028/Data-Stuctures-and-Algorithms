@@ -20,11 +20,13 @@ bool fun(int i, int a[], vector<int> &v, int n, int sum, int curr_sum)
     }
 
     v.push_back(a[i]);
-    if (fun(i + 1, a, v, n, sum, curr_sum++))
+    curr_sum += a[i];
+    if (fun(i + 1, a, v, n, sum, curr_sum))
         return true;
 
     v.pop_back();
-    if (fun(i + 1, a, v, n, sum, curr_sum++))
+    curr_sum -= a[i];
+    if (fun(i + 1, a, v, n, sum, curr_sum))
         return true;
 
     return false;
