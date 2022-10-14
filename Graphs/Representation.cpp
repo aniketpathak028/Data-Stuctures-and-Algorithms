@@ -1,13 +1,14 @@
-// Graph Representation ( Adjacency Matrix,  Adjacency List)
+// Graph-Representation ( Adjacency Matrix,  Adjacency List )
+
 #include <bits/stdc++.h>
 using namespace std;
 
 // Undirected Graph
-void adjacency_matrix() // S.C = O(n*n) [n = no. of vertices]
+void adjacency_matrix() // S.C = O(n*n) [n = no. of vertices/nodes]
 {
     int n, m;
     cin >> n >> m;
-    int adj[n][n];
+    int adj[n][n]; // assuming 0 based indexing
     for (int i = 0; i < m; i++)
     {
         int u, v;
@@ -17,7 +18,7 @@ void adjacency_matrix() // S.C = O(n*n) [n = no. of vertices]
     }
 }
 
-void adjacency_list() // S.C = O(n+2*m) [n = no. of vertices, m = no. of edges]
+void adjacency_list() // S.C = O(n+2*m) [n = no. of vertices/nodes, m = no. of edges]
 {
     int n, m;
     cin >> n >> m;
